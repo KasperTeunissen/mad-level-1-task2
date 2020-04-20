@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TruthTableActivity">
+
+    <TextView
+        android:id="@+id/topText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/conjunction"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        android:textSize="35sp"/>
+
+    <TableLayout
+        android:id="@+id/tblTruth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        app:layout_constraintTop_toBottomOf="@+id/topText"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        >
+    <!-- Row 1 with A B A^B columns -->
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >
+        <TextView
+            android:id="@+id/A"
+            android:text="@string/A"
+            android:padding="20dip"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/B"
+            android:text="@string/B"
+            android:padding="20dip"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/AB"
+            android:text="@string/AB"
+            android:padding="20dip"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </TableRow>
+
+        <!-- row 2 T T + edit text -->
+        <TableRow>
+            <TextView
+                android:text="@string/T"
+                android:padding="20dip"
+                android:gravity="center"
+                android:textSize="20sp"/>
+            <TextView
+                android:text="@string/T"
+                android:padding="20dip"
+                android:gravity="center"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/etRow1"
+                android:padding="20dip"
+                android:gravity="center"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <!-- row 3 T F + edit text -->
+        <TableRow>
+            <TextView
+                android:text="@string/T"
+                android:padding="20dip"
+                android:gravity="center"
+                android:textSize="20sp"/>
+            <TextView
+                android:text="@string/F"
+                android:padding="20dip"
+                android:gravity="center"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/etRow2"
+                android:padding="20dip"
+                android:gravity="center"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <!-- row 4 F T + edit text -->
+        <TableRow>
+            <TextView
+                android:text="@string/F"
+                android:padding="20dip"
+                android:gravity="center"
+                android:textSize="20sp"/>
+            <TextView
+                android:text="@string/T"
+                android:padding="20dip"
+                android:gravity="center"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/etRow3"
+                android:padding="20dip"
+                android:gravity="center"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <!-- row 5 F F + edit text -->
+        <TableRow>
+            <TextView
+                android:text="@string/F"
+                android:padding="20dip"
+                android:gravity="center"
+                android:textSize="20sp"/>
+            <TextView
+                android:text="@string/F"
+                android:padding="20dip"
+                android:gravity="center"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/etRow4"
+                android:padding="20dip"
+                android:gravity="center"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        app:layout_constraintTop_toBottomOf="@+id/tblTruth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
